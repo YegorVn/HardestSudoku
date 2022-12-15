@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+}
+
+* {
+}
+
+.field,
+.subfield {
+  display: grid;
+  grid-template-columns: repeat(3, min-content);
+  grid-auto-flow: row;
+}
+
+.field {
+  margin: 3rem 0 0 3rem;
+  width: fit-content;
+  border: 2px solid rgb(61, 61, 61);
+}
+
+/* ///subfield border */
+.subfield:nth-child(-3n + 5), .subfield:nth-child(8){
+    border-left: 2px solid red;
+    border-right: 2px solid red;
+}
+
+.subfield:nth-child(-2n + 3){
+    border-bottom: 2px solid red;
+}
+
+.subfield:nth-child(4), .subfield:nth-child(6), .subfield:nth-child(-3n + 5) {
+    border-bottom: 2px solid red;
+}
+
+/* ///cell border */
+.cell:nth-child(-3n + 5), .cell:nth-child(8){
+    border-left: 1px solid blue;
+    border-right: 1px solid blue;
+}
+
+.cell:nth-child(-2n + 3){
+    border-bottom: 1px solid blue;
+}
+
+.cell:nth-child(4), .cell:nth-child(6), .cell:nth-child(-3n + 5) {
+    border-bottom: 1px solid blue;
+}
+
+
+
+.cell {
+  text-align: center;
+  caret-color: transparent;
+  border-radius: 0;
+  border: unset;
+  padding: 0;
+  font-size: 2rem;
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.cell:focus {
+  outline: none;
+}
+
+
+
